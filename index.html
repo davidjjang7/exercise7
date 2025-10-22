@@ -1,16 +1,13 @@
-<!DOCTYPE html>
+085806<!DOCTYPE html>
 <html lang="en-CA">
 <head>
-  <meta charset="utf-8" />
-  <title>Exercise 7: Banh Mi, menus, and layout</title>
-
-  <!-- Google Fonts (given) -->
+  <meta charset="utf-8">
+  <title>Greg’s Banh Mi</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Oswald:wght@400;600&family=Raleway:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
-    /* Basic reset and setup */
     * { box-sizing: border-box; }
 
     body {
@@ -28,31 +25,28 @@
       padding: 0 20px;
     }
 
-    /* Site Title */
     #site-title {
       font-family: "Oswald", sans-serif;
       font-weight: 600;
       font-size: 64px;
       text-align: center;
-      margin: 0 0 10px 0;
+      margin: 0 0 12px;
     }
 
-    /* Navigation Menu */
-    nav { text-align: center; margin: 8px 0 28px; }
-    nav ul { list-style: none; padding: 0; margin: 0; }
+    nav { text-align: center; margin: 6px 0 28px; }
+    nav ul { list-style: none; margin: 0; padding: 0; }
     nav li { display: inline-block; margin: 0 14px; }
     nav a {
       font-family: "Raleway", sans-serif;
       text-decoration: none;
-      color: #4c56d3;
       text-transform: uppercase;
       font-size: 14px;
       font-weight: 600;
-      letter-spacing: 0.02em;
+      letter-spacing: .02em;
+      color: #4c56d3;
     }
     nav a:hover { color: #1f2aa0; }
 
-    /* Hero Heading */
     .hero {
       font-family: "Oswald", sans-serif;
       font-weight: 600;
@@ -60,22 +54,19 @@
       line-height: 1.35;
       text-align: center;
       max-width: 760px;
-      margin: 24px auto 36px;
+      margin: 24px auto 32px;
     }
 
-    /* Sandwich Grid Section */
     .grid {
-      text-align: center;
-      background: #e0f1e6;
-      padding: 20px;
+      background: #dff0e6;
+      padding: 28px;
       border-radius: 4px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
     }
 
     .card {
-      display: inline-block;
-      width: 45%;
-      margin: 0 2.5% 28px;
-      vertical-align: top;
       background: #f3f4f6;
       border-radius: 4px;
       overflow: hidden;
@@ -86,18 +77,15 @@
     .card img {
       width: 100%;
       display: block;
-      height: auto;
     }
 
-    .card-body {
-      padding: 14px 16px 18px;
-    }
+    .card-body { padding: 18px 20px 22px; }
 
     .card h3 {
       font-family: "Oswald", sans-serif;
       font-weight: 600;
       font-size: 20px;
-      margin: 8px 0 8px;
+      margin: 6px 0 10px;
       color: #101828;
     }
 
@@ -108,26 +96,20 @@
       line-height: 1.55;
     }
 
-    /* Footer */
-    footer {
-      margin: 36px auto 0;
-      max-width: 960px;
-      text-align: center;
-      background: #0f172a;
-      color: #fff;
-      padding: 18px 20px;
+    .cta {
+      grid-column: 1 / -1;
+      background: #ffffff;
+      color: #0f172a;
       border-radius: 4px;
-    }
-
-    /* Responsive for smaller screens */
-    @media (max-width: 720px) {
-      .card { width: 100%; margin: 0 0 20px; }
-      .hero { font-size: 24px; }
-      #site-title { font-size: 44px; }
+      padding: 20px 24px;
+      text-align: center;
+      font-family: "Oswald", sans-serif;
+      font-size: 26px;
+      line-height: 1.25;
+      margin-top: 4px;
     }
   </style>
 </head>
-
 <body>
   <div class="page">
     <h1 id="site-title">Greg’s Banh Mi</h1>
@@ -177,11 +159,11 @@
           <p>Thinly sliced beef seared with aromatic five-spice blend and served with pickled vegetables and spicy Sriracha mayo. Rich, warming spices meet cool, crunchy toppings for an unforgettable flavor experience.</p>
         </div>
       </div>
+
+      <div class="cta">
+        Because life's too short for boring sandwiches. Greg's got you covered—one crispy baguette at a time.
+      </div>
     </section>
   </div>
-
-  <footer>
-    Because life's too short for boring sandwiches. Greg's got you covered—one crispy baguette at a time.
-  </footer>
 </body>
 </html>
